@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">500</defaultcontrol>
+	<coordinates>
+			<system>1</system>
+			<posx>0</posx>
+			<posy>0</posy>
+	</coordinates>
+	<controls>
+		<!-- background -->
+		<control type="image" id="75">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black-back.png</texture>
+		</control>
+		<control type="image">
+			<description>Panel background image</description>
+			<posx>30</posx>
+			<posy>150</posy>
+			<width>1220</width>
+			<height>320</height>
+			<texture border="12">rcb-ContentPanel3.png</texture>
+		</control>
+		<control type="label">
+			<posx>80r</posx>
+			<posy>10</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[System.Time]</label>
+		</control>
+		<control type="label">
+			<posx>200</posx>
+			<posy>180</posy>
+			<width>900</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Выбор фрагмента:</label>
+		</control>
+
+		<control type="button" id="1">
+			<posx>450</posx>
+			<posy>400</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>ОК</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>600</onup>
+			<ondown>500</ondown>
+			<onleft>2</onleft>
+			<onright>2</onright>
+		</control>
+		
+		<control type="button" id="2">
+			<posx>650</posx>
+			<posy>400</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Отмена</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>600</onup>
+			<ondown>500</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+		
+		
+		<control type="list" id="600">
+			<posx>64</posx>
+			<posy>303</posy>
+			<width>1000</width>
+			<height>40</height>
+			<onleft>600</onleft>
+			<onright>600</onright>
+			<onup>500</onup>
+			<ondown>1</ondown>
+			<pagecontrol>610</pagecontrol>
+			<orientation>horizontal</orientation>
+			<viewtype label="Info 1">list</viewtype>
+			<scrolltime>100</scrolltime>
+			<itemlayout height="35" width="14">
+				<control type="image">
+					<posx>22</posx>
+					<posy>-10</posy>
+					<width>20</width>
+					<height>59</height>
+					<texture>R_.png</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35" width="14">
+				<control type="image">
+					<posx>22</posx>
+					<posy>-12</posy>
+					<width>20</width>
+					<height>59</height>
+					<texture>R_F.png</texture>
+					<visible allowhiddenfocus="true">Control.HasFocus(600)</visible>
+				</control>
+				<control type="image">
+					<posx>22</posx>
+					<posy>-12</posy>
+					<width>20</width>
+					<height>59</height>
+					<texture>R_N.png</texture>
+					<visible allowhiddenfocus="true">!Control.HasFocus(600)</visible>
+				</control>
+
+			</focusedlayout>
+		</control>
+		
+		<control type="list" id="500">
+			<posx>50</posx>
+			<posy>270</posy>
+			<width>1000</width>
+			<height>60</height>
+			<onleft>700</onleft>
+			<onright>600</onright>
+			<onup>1</onup>
+			<ondown>600</ondown>
+			<pagecontrol>610</pagecontrol>
+			<orientation>horizontal</orientation>
+			<viewtype label="Info 1">list</viewtype>
+			<scrolltime>100</scrolltime>
+			<itemlayout height="35" width="14">
+				<control type="image">
+					<posx>3</posx>
+					<posy>-10</posy>
+					<width>20</width>
+					<height>59</height>
+					<texture>L_.png</texture>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>20</width>
+					<height>35</height>
+					<font>font14</font>
+					<textcolor>FFb4b4b4</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35" width="14">
+				<control type="image">
+					<posx>3</posx>
+					<posy>-10</posy>
+					<width>20</width>
+					<height>59</height>
+					<texture>L_F.png</texture>
+					<visible allowhiddenfocus="true">Control.HasFocus(500)</visible>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>-10</posy>
+					<width>20</width>
+					<height>59</height>
+					<texture>L_N.png</texture>
+					<visible allowhiddenfocus="true">!Control.HasFocus(500)</visible>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>20</width>
+					<height>35</height>
+					<font>font14</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		
+		
+	</controls>
+</window>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">500</defaultcontrol>
+	<coordinates>
+			<system>1</system>
+			<posx>0</posx>
+			<posy>0</posy>
+	</coordinates>
+	<controls>
+		<!-- background -->
+		<control type="image" id="75">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>PTV-bg.jpg</texture>
+		</control>
+		<control type="image">
+			<description>Panel background image</description>
+			<posx>30</posx>
+			<posy>50</posy>
+			<width>1220</width>
+			<height>620</height>
+			<texture border="12">rcb-ContentPanel3.png</texture>
+		</control>
+		<control type="label">
+			<posx>80r</posx>
+			<posy>10</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[System.Time]</label>
+		</control>
+		
+		<control type="button" id="1">
+			<posx>1000</posx>
+			<posy>70</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>ОК</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>21</onleft>
+			<onright>21</onright>
+		</control>
+		
+		<control type="button" id="2">
+			<posx>1000</posx>
+			<posy>110</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Отмена</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>21</onleft>
+			<onright>21</onright>
+		</control>
+		
+		<control type="button" id="21">
+			<posx>70</posx>
+			<posy>70</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Название:</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>27</onup>
+			<ondown>22</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+		<control type="label">
+			<posx>270</posx>
+			<posy>70</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Window.Property(title)]</label>
+		</control>
+
+		<control type="button" id="22">
+			<posx>70</posx>
+			<posy>110</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Сезон:</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>21</onup>
+			<ondown>23</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+		<control type="label">
+			<posx>270</posx>
+			<posy>110</posy>
+			<width>600</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Window.Property(s)]</label>
+		</control>
+
+		<control type="button" id="23">
+			<posx>70</posx>
+			<posy>150</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Серия:</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>22</onup>
+			<ondown>24</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+		<control type="label">
+			<posx>270</posx>
+			<posy>150</posy>
+			<width>900</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Window.Property(e)]</label>
+		</control>
+
+		<control type="button" id="24">
+			<posx>70</posx>
+			<posy>190</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Создавать NFO:</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>23</onup>
+			<ondown>25</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+		<control type="label">
+			<posx>270</posx>
+			<posy>190</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Window.Property(nfo)]</label>
+		</control>
+		<control type="button" id="25">
+			<posx>70</posx>
+			<posy>230</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Жанр:</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>24</onup>
+			<ondown>26</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<visible>!IsEmpty(Window.Property(vnfo))</visible>
+		</control>
+		<control type="label">
+			<posx>270</posx>
+			<posy>230</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Window.Property(genre)]</label>
+			<visible>!IsEmpty(Window.Property(vnfo))</visible>
+		</control>
+
+		<control type="button" id="26">
+			<posx>70</posx>
+			<posy>270</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Обложка:</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>25</onup>
+			<ondown>27</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<visible>!IsEmpty(Window.Property(vnfo))</visible>
+		</control>
+		<control type="label">
+			<posx>270</posx>
+			<posy>270</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Window.Property(cover)]</label>
+			<visible>!IsEmpty(Window.Property(vnfo))</visible>
+		</control>
+		
+		<control type="button" id="27">
+			<posx>70</posx>
+			<posy>310</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Фанарт:</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>26</onup>
+			<ondown>21</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<visible>!IsEmpty(Window.Property(vnfo))</visible>
+		</control>
+		<control type="label">
+			<posx>270</posx>
+			<posy>310</posy>
+			<width>300</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Window.Property(fanart)]</label>
+			<visible>!IsEmpty(Window.Property(vnfo))</visible>
+		</control>
+
+		<control type="list" id="500">
+			<posx>80</posx>
+			<posy>400</posy>
+			<width>800</width>
+			<height>200</height>
+			<onleft>21</onleft>
+			<onright>1</onright>
+			<onup>1</onup>
+			<ondown>2</ondown>
+			<pagecontrol>610</pagecontrol>
+			<orientation>vertical</orientation>
+			<viewtype label="Info 1">list</viewtype>
+			<scrolltime>100</scrolltime>
+			<itemlayout height="35" width="1000">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>35</height>
+					<texture>rcb-MenuItemNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>35</height>
+					<font>font14</font>
+					<textcolor>FFb4b4b4</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35" width="1000">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>35</height>
+					<texture>rcb-MenuItemFO.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>35</height>
+					<font>font14</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		
+		
+	</controls>
+</window>

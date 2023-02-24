@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <category label="Общие">
+        <setting id="unlock"        type="enum"   label="Разблокировщик"           default="0"    values="нет|proxy-list|web-proxy|user-proxy"/>
+        <setting id="multithread"   type="bool"   label=" - Многопоточный поиск proxy"     default="true" visible="eq(-1,1)"/>
+        <setting id="u_proxy"       type="text"   label=" - Свой proxy:"                   default="proxy-nossl.antizapret.prostovpn.org:29976" visible="eq(-2,3)"/>
+        <setting id="open_on"       type="bool"   label="Пункт [Открыть файл]"     default="true"/>
+        <setting id="open_url"      type="bool"   label="Пункт [Открыть ссылку]"   default="true"/>
+        <setting id="ListView"      type="enum"   label="Вид списков"              default="0"    values="Не менять|Вид 1|Вид 2|Вид 3|Вид 4|Вид 5|Вид 6|Вид 7|Вид 8|Вид 9|Вид 10|Вид 11|Вид 12"/>
+        <setting id="skin"          type="enum"   label="Стиль диалогов"           default="0"    values="Confluece|Estuary"/>
+        <setting id="dir_on"        type="bool"   label="Отображать торренты из дирректории"     default="false"/>
+        <setting id="TorrDir"       type="folder" label="    Путь:"                              default=""       visible="eq(-1,true)"/>
+        <setting id="del_on"        type="bool"   label="    Разрешить удалять локальные файлы"  default="false"  visible="eq(-2,true)"/>
+        <setting id="b_name"        type="bool"   label="    Извлекать имя из торрента"          default="true"   visible="eq(-3,true)"/>
+    </category>
+    <category label="P2P">
+        <setting id="Autoplay"          type="bool"   label="Автозапуск фильмов c одним файлом"                 default="false"/>
+        <setting id="tor2mag"           type="enum"   label="Конвертировать магниты в торрент"                  default="0"   values="Откл.|Для списков|Всегда"/>
+        <setting id="Engine2"           type="enum"   label="Списки для магнитов"            default="0"   values="Авто|Откл.|ACE Steam|TorrServer|T2Http|YATP|Lt2http"/>
+        <setting id="Engine"            type="enum"   label="Движок"                         default="0"   values="ACE Steam|T2Http|YATP|Torrenter|Elementum|XBMCtorrent|-|Quasar|TorrServer|LTorrent|-|Lt2http"/>
+        
+        <setting option="close"         type="action" label="   Настройки модуля Torrent2Http"  visible="eq(-1,1)"   action="Addon.OpenSettings(script.module.torrent2http)" />
+        <setting id="DownloadDirectory" type="folder" label="   Кэш T2Http"                     visible="eq(-2,1)"   default=""/>
+        <setting id="keepfile"          type="bool"   label="   Хранить файлы"                  visible="eq(-3,1)"   default="false"/>
+        <setting id="t2h_play"          type="enum"   label="   Метод воспроизведения T2Http"   visible="eq(-4,1)"   default="0"   values="ResolvedUrl|Play"/>
+        
+        <setting id="ace_api"           type="enum"   label="   Mодуль"                         visible="eq(-5,0)"   default="1"   values="ace_engine|http_api"/>
+        <setting id="p2p_serv"          type="text"   label="   ACE сервер"                     visible="eq(-6,0)"   default="127.0.0.1"/>
+        <setting id="p2p_port"          type="text"   label="   ACE порт"                       visible="eq(-7,0)"   default="6878"/>
+        <setting option="close"         type="action" label="   Настройки модуля ACE engine"    visible="eq(-8,0)+eq(-3,0)"  action="Addon.OpenSettings(script.module.torrent.ts)" />
+        <setting id="ace_dl_end"        type="bool"   label="   Подгружать последний фрагмент"  visible="eq(-9,0)+eq(-4,1)"   default="false"/>
+        
+        <setting id="ts_api"            type="enum"   label="   Mодуль"                         visible="eq(-10,8)"  default="0"   values="module.torrserver|tam"/>
+        <setting id="ts_info"           type="bool"   label="   Свой стиль информации в плеере" visible="eq(-11,8)+eq(-1,0)"  default="true"/>
+        <setting option="close"         type="action" label="   Настройки модуля TorrServer"    visible="eq(-12,8)+eq(-2,0)"  action="Addon.OpenSettings(script.module.torrserver)" />
+        <setting id="ts_serv"           type="text"   label="   TS сервер"                      visible="eq(-13,8)+eq(-3,1)" default="127.0.0.1"/>
+        <setting id="ts_port"           type="text"   label="   TS порт"                        visible="eq(-14,8)+eq(-4,1)" default="8090"/>
+        <setting id="ts_save"           type="bool"   label="   Хранить торренты"               visible="eq(-15,8)+eq(-5,1)" default="false"/>
+        
+        <setting id="lt_api"            type="enum"   label="   Mодуль"                         visible="eq(-16,11)" default="1" values="virserg|tam"/>
+        <setting id="lt_serv"           type="text"   label="   Lt2http сервер"                 visible="eq(-17,11)" default="127.0.0.1"/>
+        <setting id="lt_port"           type="text"   label="   Lt2http порт"                   visible="eq(-18,11)" default="65225"/>
+        <setting id="lt_list"           type="enum"   label="   Хранить торрентов"              visible="eq(-19,11)" default="2" values="0|1|2|3|4|5|6"/>
+        <setting id="lt_memory_size"    type="enum"   label="   Используемая память(Мб)"        visible="eq(-20,11)" default="0" values="Авто|50|100|150|200|250|300|350|400|450|500|550|600|650|700|750|800|850"/>
+        <setting id="lt_buffer_size"    type="enum"   label="   Размер буфера(Мб)"              visible="eq(-21,11)" default="0" values="Авто|20|40|60|80|100|120|140|160|180|200|220|240|260|280|300|320|340"/>
+        
+        <setting id="note"              type="bool"   label="[COLOR FFFF2222]Эти настройки перенесены в ACE Stream > http_api [/COLOR]" visible="eq(-20,6)"  default="true"/>
+        <setting id="note"              type="bool"   label="[COLOR FFFF2222]Эти настройки перенесены в TorrServer > tam [/COLOR]"     visible="eq(-21,10)"  default="true"/>
+    </category>
+    <category label="Сохранение">
+        <setting id="SaveDirectory3" type="folder" label="Путь сохранения торрентов (TORRENT)"    default=""/>
+        <setting id="SaveDirectory2" type="folder" label="Путь сохранения сериалов  (STRM)"       default=""/>
+        <setting id="SaveDirectory"  type="folder" label="Путь сохранения фильмов   (STRM)"       default=""/>
+        <setting id="SaveNFO"        type="bool"   label="Соxранить описание фильма (NFO)"        default="false"/>
+        <setting id="SavePURL"       type="bool"   label="Создавать в сериалах ссылку на плагин"  default="false"/>
+        <setting id="SaveMagnet"     type="bool"   label="Преобразовать torrent в magnet"         default="false"/>
+    </category>
+    <category label="Эксперт">
+        <setting id="ToggleWatched"  type="bool"   label="Принудительно помечать просмотренное"   default="false"/>
+        <setting id="Plist"          type="bool"   label="Открывать сериалы как плейлист"         default="false"/>
+        <setting id="OpenMagnet"     type="bool"   label="Открывать локальный torrent как magnet" default="false"/>
+        <setting id="tcache"         type="bool"   label="Кешировать торренты"                    default="true"/>
+        <setting id="GCache"         type="bool"   label="Глобальный кеш для магнитов"            default="true"/>
+        <setting id="Debag"          type="bool"   label="Отладка (требуется перезапуск)"         default="false"/>
+    </category>
+</settings>
+        <setting id="unlock2"       type="bool"   label="Разблокировать анонсеры"  default="false"/>

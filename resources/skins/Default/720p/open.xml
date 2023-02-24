@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">500</defaultcontrol>
+	<coordinates>
+			<system>1</system>
+			<posx>0</posx>
+			<posy>0</posy>
+	</coordinates>
+	<controls>
+		<!-- background -->
+		<control type="image" id="75">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black-back_.png</texture>
+		</control>
+		<control type="image">
+			<description>Panel background image</description>
+			<posx>150</posx>
+			<posy>150</posy>
+			<width>1000</width>
+			<height>320</height>
+			<texture border="12">rcb-ContentPanel4.png</texture>
+		</control>
+		<control type="image">
+			<description>update</description>
+			<posx>610</posx>
+			<posy>180</posy>
+			<width>80</width>
+			<height>80</height>
+			<texture>update.gif</texture>
+		</control>
+		
+		<control type="label" id="31">
+			<posx>200</posx>
+			<posy>203</posy>
+			<width>900</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>4</label>
+		</control>
+		
+		<control type="label" id="32">
+			<posx>200</posx>
+			<posy>290</posy>
+			<width>900</width>
+			<height>35</height>
+			<font>font24_title</font>
+			<textcolor>FFb4b4b4</textcolor>
+			<selectedcolor>selected</selectedcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label> </label>
+		</control>
+		
+		<control type="button" id="1">
+			<posx>350</posx>
+			<posy>400</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Выбрать качество</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>600</onup>
+			<ondown>500</ondown>
+			<onleft>24</onleft>
+			<onright>2</onright>
+		</control>
+		
+		<control type="button" id="2">
+			<posx>550</posx>
+			<posy>400</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Отмена</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>600</onup>
+			<ondown>500</ondown>
+			<onleft>1</onleft>
+			<onright>24</onright>
+		</control>
+		
+		<control type="button" id="24">
+			<posx>750</posx>
+			<posy>400</posy>
+			<width>180</width>
+			<height>40</height>
+			<texturefocus   border="4" colordiffuse="EEFFFFFF">PTV-tab.png</texturefocus>
+			<texturenofocus border="4" colordiffuse="EEFFFFFF">PTV-tab_N.png</texturenofocus>
+			<label>Найти на КП</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>FF000000</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<disabledcolor>80FFFFFF</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+			<onclick></onclick>
+			<onup>600</onup>
+			<ondown>500</ondown>
+			<onleft>2</onleft>
+			<onright>1</onright>
+		</control>
+		
+	</controls>
+</window>
